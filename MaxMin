@@ -1,0 +1,30 @@
+nums=[]
+while(True):
+  try:
+      s=input ()
+      x=int(s)
+      nums.append(x)
+  except:
+      if(s=='done'):
+         break
+      else:
+         print('Invalid input')
+         continue
+
+
+maxi=None
+mini=None
+
+for value in nums:
+    if maxi is None:
+        maxi=value
+    elif value>=maxi:
+        maxi=value
+    
+    if mini is None:
+        mini=value;
+    elif value<=mini:
+        mini=value
+
+print('Maximum is ', maxi)
+print('Minimum is ',mini)
