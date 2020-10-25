@@ -1,0 +1,14 @@
+cap=10 
+k=5
+
+buy=int(input())
+
+if(buy>cap or buy==0):
+    print("INVALID INPUT")
+    print("NUMBER OF CANDIES AVAILABLE: ",cap)
+else:
+    cap=cap-buy;
+    if(cap<=k):
+        cap=10;
+    print("NUMBER OF CANDIES SOLD: ",buy)
+    print("NUMBER OF CANDIES AVAILABLE: ",cap)
