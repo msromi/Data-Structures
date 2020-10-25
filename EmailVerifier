@@ -1,0 +1,14 @@
+import re #library imported to use the regex function
+
+
+mail=input("Write your email address: ")
+
+regex = '^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$'
+
+
+#First we check for validity
+if(re.search(regex,mail)):  
+        print("The email address is valid")
+          
+else:
+    print("The email address is invalid")
